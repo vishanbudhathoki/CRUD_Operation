@@ -38,6 +38,7 @@
         <div>
             <a href="{{route('product.create')}}" class="btn btn-primary  pt-10 pb-12 mt-10 mb-12" >Create a Product</a>
         </div>
+        <br>
         <form method="post" action="{{ route('product.deleteSelected') }}">
             @csrf
 
@@ -84,7 +85,9 @@
                 @endforeach
             </table> 
             <input type="hidden" name="selectedProductsHidden" value="">
-            <button type="submit" class="btn btn-danger">Delete Selected Products</button>
+            <div class = text-right>
+                <button type="submit" class="btn btn-danger">Delete Selected Products</button>
+            </div>    
         </form>              
     </div>
     <script>
